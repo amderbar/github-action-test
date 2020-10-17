@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install Pandoc
-      run: apt install Pandoc
+      run: apt-get install -y Pandoc
     - name: build slide
       run: |
         mkdir slides
