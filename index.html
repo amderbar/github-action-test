@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>slides</title>
+  <title>My Slideshow</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -24,6 +24,9 @@
   <div class="reveal">
     <div class="slides">
 
+<section id="title-slide">
+  <h1 class="title">My Slideshow</h1>
+</section>
 
 <section id="this-is-slide" class="slide level1">
 <h1>This is Slide</h1>
@@ -73,6 +76,8 @@
       Reveal.initialize({
         // Push each slide change to the browser history
         history: true,
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
 
         // reveal.js plugins
         plugins: [
