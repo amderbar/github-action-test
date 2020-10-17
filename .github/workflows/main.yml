@@ -10,12 +10,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Install Pandoc
-      run: apt-get install -y Pandoc
+    - run: mkdir slides
     - name: build slide
-      run: |
-        mkdir slides
-        pandoc -s -t revealjs -o slides/slide.html slides.md
+      uses: docker://pandoc/core:2.9
+        with:
+          args: -s -t revealjs -o slides/slide.html slides.md
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
