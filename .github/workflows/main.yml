@@ -13,8 +13,8 @@ jobs:
     - run: mkdir slides
     - name: build slide
       uses: docker://pandoc/core:2.9
-        with:
-          args: -s -t revealjs -o slides/slide.html slides.md
+      with:
+        args: -s -t revealjs -o slides/slide.html slides.md
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
