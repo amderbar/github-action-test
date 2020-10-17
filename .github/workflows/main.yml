@@ -10,15 +10,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.6
-    - name: Install dependencies
-      run: gem install reveal-ck
+    - name: Install Pandoc
+      run: apt install Pandoc
     - name: build slide
-      run: reveal-ck generate
+      run: |
+        mkdir slides
+        pandoc -s -t revealjs -o slides/slide.html slides.md
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
