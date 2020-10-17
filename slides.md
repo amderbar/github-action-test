@@ -1,3 +1,8 @@
+---
+transition: "default"
+title: My Slideshow
+---
+
 # This is Slide
 
 Slide page 1.
